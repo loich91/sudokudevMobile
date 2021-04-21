@@ -1,14 +1,14 @@
 package be.technifutur.sudoku;
 
 public abstract interface Sudoku {
+    char empty='_';
 
+    void addValue(int line,int column,char value);
 
-    void addValue();
+    char getValue(int line,int column);
 
-    Character getValue();
+    boolean isValueValid(char value);
 
-    Boolean isValueValid();
-
-    Boolean isCellValid();
+    boolean isCellValid(int line,int column);
 
 }

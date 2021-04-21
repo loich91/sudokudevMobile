@@ -1,23 +1,21 @@
 package be.technifutur.sudoku;
 
 public class sudokuEtoile implements Sudoku {
-    private int line;
-    private int column;
-    private int value;
-    @Override
-    public void addValue() {
 
+    @Override
+    public void addValue(int line,int column,char value) {
+        return;
     }
     @Override
-    public Character getValue() {
-        return null;
+    public char getValue(int line,int column) {
+        return 'a';
     }
     @Override
-    public Boolean isValueValid() {
-        return null;
+    public boolean isValueValid(char value) {
+        return true;
     }
     @Override
-    public Boolean isCellValid() {
-        return null;
+    public boolean isCellValid(int line,int column) {
+        return true;
     }
 }
