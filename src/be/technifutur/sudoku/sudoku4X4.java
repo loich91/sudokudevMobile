@@ -1,40 +1,32 @@
 package be.technifutur.sudoku;
 
-public class sudoku4X4 implements Sudoku  {
+public class sudoku4X4 extends sudoAbstract   {
+     public sudoku4X4() {
+        super(4,4);
+        ValueSet ligne = new ValueSet();
+        ValueSet colonne = new ValueSet();
+        for (int l = 0;l<4;l++){
 
-    private char [][] sudoku4;
-public sudoku4X4(){
-    this.sudoku4 = new char [4][4];
-    for(int l=0; l < sudoku4.length;l++){
-        for (int c=0; c < sudoku4[l].length;c++){
-            this.sudoku4[l][c]=empty;
         }
-    }
-}
-public void afficher(){
-    for(int l=0; l < sudoku4.length;l++){
+        for (int c =0; c<4;c++){
 
-        for (int c=0; c< sudoku4.length;c++){
-            System.out.print(sudoku4[l][c]);
         }
-        System.out.println();
-    }
-}
+     }
 
-    @Override
-    public void addValue(int line,int column,char value) {
-        return;
-    }
-    @Override
-    public char getValue(int line,int column) {
-        return 'a';
-    }
+
+
     @Override
     public boolean isValueValid(char value) {
-        return true;
+        if ( value > '0' && value <= '4'){
+            return true;
+        }
+
+        return false;
     }
+
+
     @Override
     public boolean isCellValid(int line,int column) {
-        return true;
+        return line >= 0 && line < 4 && column >= 0 && column < 4;
     }
 }

@@ -2,6 +2,7 @@ package be.technifutur.sudoku;
 
 public abstract interface Sudoku {
     char empty='_';
+    void lock();
 
     void addValue(int line,int column,char value);
 
